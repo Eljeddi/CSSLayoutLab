@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      /*if you support (understand this property then do else don't ! )*/
+      @supports (initial-letter: 4) {
+        p::first-letter {
+          color: orange;
+          font-weight: bold;
+          margin-right: 0.5em;
+          -webkit-initial-letter: 4;
+          initial-letter: 4;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+      minus aperiam possimus! Odit in soluta ad esse. Tempora cupiditate nam
+      rerum repellat. Illum praesentium eveniet placeat, commodi eum veniam
+      voluptatibus!
+    </p>
+  </body>
+</html>

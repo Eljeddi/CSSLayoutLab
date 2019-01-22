@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Grid Project</title>
+    <style>
+      /**
+ * Define the space for each grid item by declaring the grid
+ * on the grid container.
+ */
+      #grid {
+        /**
+   * Two columns:
+   *  1. the first sized to content,
+   *  2. the second receives the remaining space
+   *     (but is never smaller than the minimum size of the board
+   *     or the game controls, which occupy this column [Figure 4])
+   *
+   * Three rows:
+   *  3. the first sized to content,
+   *  4. the middle row receives the remaining space
+   *     (but is never smaller than the minimum height
+   *      of the board or stats areas)
+   *  5. the last sized to content.
+   */
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr auto;
+      }
+
+      /* Specify the position of each grid item using coordinates on
+ * the 'grid-row' and 'grid-column' properties of each grid item.
+ */
+      #title {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      #score {
+        grid-column: 1;
+        grid-row: 3;
+      }
+      #stats {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: start;
+      }
+      #board {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+      }
+      #controls {
+        grid-column: 2;
+        grid-row: 3;
+        justify-self: center;
+      }
+      .item {
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <div id="title" class="item">
+        Game Title
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
+          enim et ullam voluptates, consequuntur officiis perspiciatis autem
+          voluptas qui dignissimos doloremque ut, assumenda molestiae iure odit
+          rerum! Eos quidem tempore dolorum. Sint ipsam esse iure saepe quas quo
+          aspernatur accusantium officia repellat voluptatibus id cupiditate,
+          est ipsa qui ducimus ullam? Delectus esse ipsam repudiandae
+          exercitationem eveniet obcaecati, magni ex quisquam laboriosam at
+          provident fugiat non aliquam facere error nostrum expedita, cumque
+          fuga quidem molestias libero voluptates doloremque! Laboriosam nihil,
+          et recusandae eaque corrupti possimus praesentium maxime magnam
+          voluptate, nobis sunt exercitationem beatae consequatur quaerat.
+          Molestias error quae ab aliquam natus tempora obcaecati dolor aut, nam
+          numquam quas voluptatum cum tenetur incidunt saepe quibusdam omnis
+          officiis laudantium impedit ipsa? Voluptatem, explicabo, impedit et
+          odit, praesentium dolores ratione omnis quam voluptatibus accusantium
+          tempore eaque velit vitae cumque eveniet? Itaque explicabo harum
+          provident maiores obcaecati at asperiores assumenda impedit
+          cupiditate. Adipisci itaque consequuntur, laboriosam explicabo quaerat
+          delectus minima ducimus iure nobis odio id unde sed esse! Quas, cumque
+          laudantium! Inventore deleniti quasi placeat suscipit officiis saepe
+          iusto id quis adipisci tenetur sint, maiores delectus ex consectetur
+          totam odit quas repellat aspernatur tempore. Quam dolorem consequatur
+          repellendus ad nihil totam nobis culpa dolores, sapiente quisquam,
+          iste natus animi numquam expedita temporibus adipisci voluptatum
+          possimus at reprehenderit. Dicta nemo illum cupiditate corrupti ut
+          distinctio dolore hic odit voluptas! Nulla quam eligendi nobis
+          accusantium quibusdam dolorum voluptatibus repellat dolor, molestiae
+          dolore debitis omnis iste doloribus dicta corrupti facilis sequi.
+          Eaque adipisci, voluptas consequatur reprehenderit voluptate porro
+          excepturi perferendis? Doloribus, veniam asperiores? Atque veritatis
+          deleniti qui odit. Explicabo iusto animi soluta eveniet ut delectus
+          eligendi maxime cumque, quidem assumenda ipsam, necessitatibus
+          provident deserunt corrupti, praesentium blanditiis vero nihil atque
+          deleniti. Veniam reiciendis molestiae, ab ipsa velit nisi voluptas
+          sunt qui nihil quae inventore, minus, aperiam molestias ea.
+        </p>
+      </div>
+      <div id="score" class="item">
+        Score
+        <ul>
+          <li>1234</li>
+          <li>1234</li>
+          <li>1234</li>
+          <li>1234</li>
+          <li>1234</li>
+        </ul>
+      </div>
+      <div id="stats" class="item">Stats</div>
+      <div id="board" class="item">Board</div>
+      <div id="controls" class="item">Controls</div>
+    </div>
+  </body>
+</html>

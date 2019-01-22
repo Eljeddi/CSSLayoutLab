@@ -1,0 +1,63 @@
+/*mobile first design*/
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30vh 30vh 30vh 30vh 50vh 20vh;
+  grid-template-areas: "navbar" "sect1" "sect2" "sect3" "main" "footer";
+  color: gray;
+  text-align: center;
+}
+aside {
+  background: blue;
+  grid-area: sidebar;
+  display: none;
+}
+header {
+  background: black;
+  grid-area: navbar;
+}
+section:nth-last-of-type(1) {
+  background: yellow;
+  grid-area: sect1;
+}
+section:nth-last-of-type(2) {
+  background: yellowgreen;
+  grid-area: sect2;
+}
+section:nth-last-of-type(3) {
+  background: orange;
+  grid-area: sect3;
+}
+main {
+  background: red;
+  grid-area: main;
+}
+footer {
+  background: green;
+  grid-area: footer;
+}
+@media screen and (min-width: 768px) {
+  header {
+    background: gray;
+  }
+  aside {
+    display: inline;
+  }
+  body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 27% 27% 27%;
+    grid-template-rows: 10% 30% 50% 10%;
+    grid-template-areas:
+      "sidebar navbar navbar navbar"
+      "sidebar sect1 sect2 sect3"
+      "sidebar main main main"
+      "sidebar footer footer footer";
+    color: gray;
+    text-align: center;
+  }
+}

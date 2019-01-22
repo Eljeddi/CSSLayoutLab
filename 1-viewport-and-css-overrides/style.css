@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+/*vh and min-height in case of IE*/
+header {
+  display: flex;
+  height: 100vh;
+  min-height: 500px;
+  background: url(bg.jpg) center;
+  background-size: cover;
+}
+h1 {
+  margin: auto;
+}
